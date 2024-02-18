@@ -14,9 +14,10 @@
     <!--Font Awesome  -->
     <script src="https://kit.fontawesome.com/e030e39643.js" crossorigin="anonymous"></script>
     <!-- Google Font -->
-
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style/style.css">
 </head>
-<body>
+<body class="font-poppins">
     <header class="container mx-auto">
         <nav>
             <div class="navbar bg-base-100">
@@ -111,7 +112,7 @@
                         <div>
                             
                             <button class="btn bg-white text-green-500">
-                                <img src="./images/seat-green.png" alt="">40seats Left</button>
+                                <img src="./images/seat-green.png" alt=""><span id="total-seat">40</span> seats Left</button>
                         </div>        
                     </div>
 
@@ -137,12 +138,12 @@
                 </div>
                 <div class="price-section flex-1 p-20">
                     <img src="./images/fare.png" alt="">
-                    <h1 class="font-extrabold">550 Taka</h1>
+                    <h1 class="font-extrabold"><span id="price">550</span> Taka</h1>
                     <p>Per Seat</p>
                 </div>
             </div>
             <!-- Seat Section -->
-            <div class="seat-section mt-10 mb-10">
+            <div id="seat" class="seat-section mt-10 mb-10">
 
                 <div class="seat-main container mx-auto flex ticket-description bg-white border rounded-xl">
                     
@@ -168,42 +169,44 @@
                                 <button class="btn bg-[#F7F8F8]"><img src="./images/bus-icon.png" alt=""></button>
                             
                             </div>
-
-                            <div class="flex justify-around p-5 gap-20">
-                                <p class="pt-3">A</p>
-                                <button  class="btn bg-[#F7F8F8]">A1</button>
-                                <button class="btn bg-[#F7F8F8]">A2</button>
-                                <button class="btn bg-[#F7F8F8]">A3</button>
-                                <button class="btn bg-[#F7F8F8]">A4</button>
+                            <div class="seat-div">
+                                <div  class="flex justify-around p-5 gap-20">
+                                    <p class="pt-3">A</p>
+                                    <button id="A1" class="btn bg-[#F7F8F8]">A1</button>
+                                    <button id="A2" class="btn bg-[#F7F8F8]">A2</button>
+                                    <button id="A3" class="btn bg-[#F7F8F8]">A3</button>
+                                    <button id="A4" class="btn bg-[#F7F8F8]">A4</button>
+                                </div>
+                                <div class="flex justify-around p-5 gap-20">
+                                    <p class="pt-3">B</p>
+                                    <button id="B1" class="btn bg-[#F7F8F8]">B1</button>
+                                    <button id="B2" class="btn bg-[#F7F8F8]">B2</button>
+                                    <button id="B3" class="btn bg-[#F7F8F8]">B3</button>
+                                    <button id="B4" class="btn bg-[#F7F8F8]">B4</button>
+                                </div>
+                                <div class="flex justify-around p-5 gap-20">
+                                    <p class="pt-3">C</p>
+                                    <button id="C1" class="btn bg-[#F7F8F8]">C1</button>
+                                    <button id="C2" class="btn bg-[#F7F8F8]">C2</button>
+                                    <button id="C3" class="btn bg-[#F7F8F8]">C3</button>
+                                    <button id="C4" class="btn bg-[#F7F8F8]">C4</button>
+                                </div>
+                                <div class="flex justify-around p-5 gap-20">
+                                    <p class="pt-3">D</p>
+                                    <button id="D1" class="btn bg-[#F7F8F8]">D1</button>
+                                    <button id="D2" class="btn bg-[#F7F8F8]">D2</button>
+                                    <button id="D3" class="btn bg-[#F7F8F8]">D3</button>
+                                    <button id="D4" class="btn bg-[#F7F8F8]">D4</button>
+                                </div>
+                                <div class="flex justify-around p-5 gap-20">
+                                    <p class="pt-3">F</p>
+                                    <button id="F1" class="btn bg-[#F7F8F8]">F1</button>
+                                    <button id="F2" class="btn bg-[#F7F8F8]">F2</button>
+                                    <button id="F3" class="btn bg-[#F7F8F8]">F3</button>
+                                    <button id="F4" class="btn bg-[#F7F8F8]">F4</button>
+                                </div>
                             </div>
-                            <div class="flex justify-around p-5 gap-20">
-                                <p class="pt-3">B</p>
-                                <button class="btn bg-[#F7F8F8]">B1</button>
-                                <button class="btn bg-[#F7F8F8]">B2</button>
-                                <button class="btn bg-[#F7F8F8]">B3</button>
-                                <button class="btn bg-[#F7F8F8]">B4</button>
-                            </div>
-                            <div class="flex justify-around p-5 gap-20">
-                                <p class="pt-3">C</p>
-                                <button class="btn bg-[#F7F8F8]">C1</button>
-                                <button class="btn bg-[#F7F8F8]">C2</button>
-                                <button class="btn bg-[#F7F8F8]">C3</button>
-                                <button class="btn bg-[#F7F8F8]">C4</button>
-                            </div>
-                            <div class="flex justify-around p-5 gap-20">
-                                <p class="pt-3">D</p>
-                                <button class="btn bg-[#F7F8F8]">D1</button>
-                                <button class="btn bg-[#F7F8F8]">D2</button>
-                                <button class="btn bg-[#F7F8F8]">D3</button>
-                                <button class="btn bg-[#F7F8F8]">D4</button>
-                            </div>
-                            <div class="flex justify-around p-5 gap-20">
-                                <p class="pt-3">F</p>
-                                <button class="btn bg-[#F7F8F8]">F1</button>
-                                <button class="btn bg-[#F7F8F8]">F2</button>
-                                <button class="btn bg-[#F7F8F8]">F3</button>
-                                <button class="btn bg-[#F7F8F8]">F4</button>
-                            </div>
+                            
 
                         </div>
                         <div>
@@ -215,7 +218,25 @@
                             </div>
                             <div class="bg-[#F7F8F8] border rounded-lg m-3 p-10">
                                 <div class="flex justify-around gap-10">
-                                    <p>Seat <span id="select-ticket" class="bg-green-300 border rounded-md">2</span></p>
+                                    <table>
+                                        <tr>
+                                            <th>Seat <span id="select-ticket" class="bg-green-300 border rounded-md">2</span></th>
+                                            <th>Class</th>
+                                            <th>Price</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+
+                                            </td>
+                                            <td>
+                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+
+                                        </tr>
+                                    </table>
+                                    <!-- <p>Seat <span id="select-ticket" class="bg-green-300 border rounded-md">2</span></p>
                                     <p>Class</p>
                                     <p>price</p>
                                 </div>
@@ -241,7 +262,7 @@
                                     <div>
                                         <p>BDT <span id="gTotal"></span></p>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <!-- passenger Info -->
                             <div class="p-10">
@@ -288,5 +309,7 @@
             </nav>
           </footer>
     </footer>
+    <script src="script/index.js"></script>
+    <script src="script/utility.js"></script>
 </body>
 </html>
