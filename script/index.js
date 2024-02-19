@@ -14,13 +14,10 @@ for(const btn of allBtn){
       const seatId=e.target.innerText;
       addTableElement(seatId,quality,price);
       
-      
-
-
-
       totalCost('ticketPrice',parseInt(price));
       grandTotalCost('grandTotal',parseInt(price));
        e.target.style.backgroundColor="yellow";
+       
    });
 }
 
@@ -39,11 +36,26 @@ function grandTotalCost(){
    const convertedTotalCost=parseInt(totalCost);
    let code=document.getElementById('code').value;
    if(code=="NEW15"){
-      setInnerText("grandTotal",convertedTotalCost-100);
+      setInnerText("grandTotal",convertedTotalCost-(0.15*convertedTotalCost));
+   }else if(code=="Couple 20"){
+      setInnerText("grandTotal",convertedTotalCost-(.20*convertedTotalCost));
    }else{
       setInnerText("grandTotal",convertedTotalCost);
    }
-   
-   
 
 }
+
+const modal=document.querySelector('.modal');
+const showModal=document.querySelector('.showModal');
+const closeModal=document.querySelector('.close-modal');
+
+showModal.addEventListener('click', function(){
+   modal.classList.remove('hidden');
+})
+
+closeModal.addEventListener('click',function(){
+   modal.classList.add('hidden');
+})
+
+
+   
