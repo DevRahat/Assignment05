@@ -57,5 +57,48 @@ closeModal.addEventListener('click',function(){
    modal.classList.add('hidden');
 })
 
+   const form=document.getElementById('form');
+   const userName=document.getElementById('userName');
+   const phone=document.getElementById('phone');
+   const mail=document.getElementById('mail');
 
-   
+   form.addEventListener('submit',e=>{
+      e.preventDefault();
+
+      validateInputs();
+   })
+   const setError=(element,message)=>{
+      const inputControl=element.parentElement;
+      const errorDisplay=inputControl.querySelector('.error');
+
+      errorDisplay.innerText=message;
+      inputControl.classList.add('error');
+      inputControl.classList.remove('success');
+   }
+
+   const setSuccess=element=>{
+      const inputControl=element.parentElement;
+      const errorDisplay=inputControl.querySelector('.error');
+
+      errorDisplay.innerText="";
+      inputControl.classList.add('success');
+      inputControl.classList.remove('error');
+   }
+
+   const validateInputs =()=>{
+      const userName=userName.value.trim();
+      const phone=phone.value.trim();
+      const mail=mail.value.trim();
+
+      if(userName===''){
+         setError(userName,'User Name is Required');
+      }else{
+         setSuccess(userName);
+      }
+
+      if(phone== ''){
+         setError(phone,'Phone Number is Required');
+      }else{
+         setSuccess(phone);
+      }
+   }
